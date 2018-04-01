@@ -1,0 +1,35 @@
+/* humanstxt.org */
+
+Name: 					Bílabær sf. 
+Site:						http://bilabaer.is
+Location:				IS
+
+
+Default theme design:
+
+Name: 				eg: Kristjan B. Halfdanarson
+Site:					eg: http://kristjanbh.com
+Twitter:			eg: @kristjanbh
+Location:			eg: DK
+
+Javascript:
+
+Name: 				eg: Kristjan B. Halfdanarson
+Site:					eg: http://kristjanbh.com
+Twitter:			eg: @kristjanbh
+Location:			eg: DK
+
+/* SITE */
+
+Standards: 
+
+HTML5
+CSS3
+
+Components: 
+
+jQuery: 							http://jquery.com
+Modernizr: 						http://modernizr.com
+Selectivizr: 					http://selectivizr.com
+Responsive Patterns:	http://bradfrost.github.com/this-is-responsive/patterns.html
+320 and Up: 					http://stuffandnonsense.co.uk/projects/320andup 

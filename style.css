@@ -1,0 +1,1474 @@
+/**
+* _________________________________________________
+* Project name: 
+* Kristjan B. Halfdanarson
+* @kristjanbh
+* http://kristjanbh.com
+* Version: of project
+* URL: of project
+* _____________________________________________________
+*
+* 1. RESET CSS
+* 2. FONT FACE
+* 3. ROOT
+* 4. HEADINGS
+* 5. TYPOGRAPHY
+* 6. LINKS
+* 7. FIGURES & IMAGES
+* 8. TABLES
+* 9. FORMS
+* 10. BANNER
+* 11. NAVIGATION
+* 12. CONTENT
+* 13. MAIN
+* 14. COMPLEMENTARY
+* 15. CONTENT INFO
+* 16. GLOBAL OBJECTS
+* 17. VENDOR-SPECIFIC 
+* 18. MODERNIZR
+* 19. TEMPLATE SPECIFICS
+* 20. MEDIA QUERIES
+*
+**/
+
+/* 1. Reset CSS ================================================================================== */
+
+@import url('normalize.css');
+/* General Demo Style */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* 2. FONT FACE ================================================================================== */
+
+@font-face{ 
+	font-family: 'museo-700';
+	src: url('assets/font/museo_700_macroman/museo700-regular-webfont.eot');
+	src: url('assets/font/museo_700_macroman/museo700-regular-webfont.eot?iefix') format('eot'),
+	     url('assets/font/museo_700_macroman/museo700-regular-webfont.woff') format('woff'),
+	     url('assets/font/museo_700_macroman/museo700-regular-webfont.ttf') format('truetype'),
+	     url('assets/font/museo_700_macroman/museo700-regular-webfont.svg#webfont') format('svg');
+}
+
+@font-face{ 
+	font-family: 'museo-300';
+	src: url('assets/font/museo_300_macroman/museo300-regular-webfont.eot');
+	src: url('assets/font/museo_300_macroman/museo300-regular-webfont.eot?iefix') format('eot'),
+	     url('assets/font/museo_300_macroman/museo300-regular-webfont.woff') format('woff'),
+	     url('assets/font/museo_300_macroman/museo300-regular-webfont.ttf') format('truetype'),
+	     url('assets/font/museo_300_macroman/museo300-regular-webfont.svg#webfont') format('svg');
+}
+
+
+@font-face {
+    font-family: 'notethisregular';
+    src: url('assets/font/note-this/Note-this-webfont.eot');
+    src: url('assets/font/note-this/Note-this-webfont.eot?#iefix') format('eot'),
+         url('assets/font/note-this/Note-this-webfont.woff') format('woff'),
+         url('assets/font/note-this/Note-this-webfont.ttf') format('truetype'),
+         url('assets/font/note-this/Note-this-webfont.svg#NotethisRegular') format('svg');
+
+}
+
+/* 3. ROOT ======================================================================================= */
+html {
+	overflow-y : scroll;
+	background : rgb(255,255,255); 
+	font-size : 100%; 
+	height: 100%;
+}
+
+body { 
+	position: relative;
+	margin : 0 auto;
+	padding : 0;
+	width : 90%; /* 252px; */
+	.font-size();
+	.serif();
+	color : rgb(40,40,40); 
+	background-color : transparent; 
+	width: 100%;
+	font-family : "museo-300", Helvetica, Arial, sans-serif; 
+	color: rgb(60, 60, 60);
+}
+
+button, 
+input, 
+select, 
+textarea { 
+	font-family : "museo-300", Helvetica, Arial, sans-serif; 
+}
+
+/* 4. HEADINGS =================================================================================== */
+h1, 
+h2, 
+h3, 
+h4, 
+h5, 
+h6 {
+	font-family: "museo-700", helvetica, arial, sans-serif;
+	font-weight : bold;
+	margin-bottom: 0;
+	color: rgb(60, 60, 60);
+}
+
+h1 {
+	font-size: 2rem;
+	margin-bottom: 20px;
+}
+
+h3{
+	margin-bottom: 2px;
+}
+
+h4{
+	
+}
+
+/* 5. TYPOGRAPHY ================================================================================= */
+p, 
+ol, 
+ul, 
+dl, 
+address { 
+}
+
+p {
+	hyphens : auto; 
+	text-align : justify; 
+}
+
+ul, 
+ol { 
+	margin : 0 0 0 -24px; 
+	padding : 0 0 0 24px; 
+}
+
+li ul, 
+li ol { 
+	margin : 0;
+}
+
+dl, 
+dd { 
+	margin-bottom : 0;  
+}
+
+dt { 
+	font-weight : normal; 
+}
+
+blockquote  { 
+	margin : 0 0 0 -24px; 
+	padding-left : 24px; 
+	border-left : 1px solid #333;
+	font-style : italic; 
+}
+
+blockquote:before, 
+blockquote:after, 
+q:before, 
+q:after {
+	content : '';
+	content : none; 
+}
+
+
+/* 6. LINKS ====================================================================================== */
+a { 
+	color : rgb(60, 60, 60);
+	text-decoration: none;
+}
+
+a:visited { 
+	color : rgb(200, 200, 200); 
+}
+
+a:hover { 
+	color : #ff0000; 
+}
+
+a:focus { 
+	outline : thin dotted; 
+	color : #0000ff; 
+}
+
+a:hover, 
+a:active { 
+	outline : 0; 
+}
+/* 7. FIGURES & IMAGES =========================================================================== */
+figure {
+	margin-bottom: 0;
+}
+
+figure img,
+figure object,
+figure embed {
+	margin-bottom : 0;
+	max-width : 100%; 
+}
+
+figcaption {
+	display : block;
+	font-weight : normal; 
+}
+
+img {
+	border : 0; 
+}
+
+svg:not(:root) {
+	overflow : hidden; 
+}
+
+/* 8. TABLES ===================================================================================== */
+table { 
+	border-collapse : collapse;
+	border-spacing : 0;
+	margin-bottom : 0; 
+	width : 100%;
+	font-size: 14rem; 
+}
+
+
+tfoot { 
+	font-style : italic; 
+}
+
+caption { 
+	background-color : transparent; 
+}
+
+
+
+/* 9. FORMS ====================================================================================== */
+form { 
+	margin : 0; 
+}
+
+fieldset { 
+	margin-bottom : 0; 
+	padding : 0; 
+	border-width : 0; 
+}
+
+legend { 
+	*margin-left : -7px; 
+	padding : 0; 
+	border-width : 0; 
+}
+
+label { 
+	font-weight : normal;
+	cursor : pointer; 
+}
+
+button, 
+input, 
+select, 
+textarea { 
+	font-size: 	1em;
+	margin : 0; 
+	vertical-align : baseline; 
+	*vertical-align : middle; 
+}
+
+button, input { 
+	line-height : normal; 
+	*overflow : visible; 
+}
+
+button, 
+input[type="button"], 
+input[type="reset"], 
+input[type="submit"] { 
+	cursor : pointer; 
+}
+
+input[type="checkbox"], 
+input[type="radio"] { 
+	box-sizing : border-box; 
+}
+
+input[type="search"] { 
+	box-sizing : content-box; 
+}
+
+button::-moz-focus-inner, 
+input::-moz-focus-inner { 
+	padding : 0;
+	border : 0; 
+}
+
+textarea { 
+	overflow : auto; 
+	vertical-align : top; 
+}
+/* 10. BANNER ==================================================================================== */
+#top_header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	height: 85px;
+	
+	background: #fafafa;
+	
+	box-shadow: 0px 1px 5px 2px rgba(0, 0, 0, 0.1);
+	z-index: 500;
+}
+/* 11. NAVIGATION ================================================================================ */
+#main_nav {
+	width: 100%;
+	max-width: 960px;
+	margin: 0 auto;
+	height: 85px;
+}
+
+#main_nav ul {
+	position: relative;
+	display: block;
+	overflow: hidden;
+	left: 0;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	height: 85px;
+}
+
+#main_nav ul li {
+	display: block;
+	float: left;
+}
+#main_nav ul li:first-child {
+	margin: 0 286px 0 0;	
+}
+#main_nav ul li:first-child a {
+	margin: 25px 10px 41px 0;
+	padding: 0;
+}
+
+#main_nav ul li:last-child a {
+	padding-right: 0;
+}
+
+#main_nav ul li a {
+	display: block;
+	line-height: 19px;
+	float: none;
+	padding: 33px 10px 33px;
+	margin-left: 20px;	
+}
+
+
+/* 12. CONTENT =================================================================================== */
+/* 13. MAIN ====================================================================================== */
+.handskrift {
+	font-family: notethisregular,  helvetica, arial, sans-serif;
+	font-size: 1.8rem;
+	color: rgba(0, 0, 0, 0.8);
+	width: auto;
+		text-indent: -9999px;
+	
+}
+
+#simi {
+	position: relative;
+	bottom: -260px;
+	left: 340px;
+	width: 181px;
+	height: 68px;
+	
+	background: url(assets/img/bb-simi.png);
+	/*
+	-moz-transform: rotate(-15deg);
+	-webkit-transform: rotate(-15deg);
+	-o-transform: rotate(-15deg);
+	-ms-transform:rotate(-15deg);
+	filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=-1.5);
+	*/
+}
+
+#logo img {
+	width: 100%;
+	max-width: 450px;
+}
+
+#timatafla {
+	font-size: 1.1rem;
+	line-height: 1.8rem;
+	font-weight: 300;
+	letter-spacing: 0.08rem;
+}
+
+#hadegi{
+	font-size: .8rem;
+	line-height: 1.2rem;
+	text-align: right;
+	color: rgb(100, 100, 100);
+}
+
+#heimilisfang {
+	font-size: 1.1rem;
+	line-height: 1.8rem;
+	font-weight: 300;
+	letter-spacing: 0.08rem;
+}
+
+#gagnvirkt_kort {
+	position: relative;
+	bottom: -300px;
+	left: 300px;
+	width: 380px;
+	height: 38px;
+	
+	background: url(assets/img/bb-smell.png);
+	/*
+	-moz-transform: rotate(2deg);
+	-webkit-transform: rotate(2deg);
+	-o-transform: rotate(2deg);
+	-ms-transform:rotate(2deg);
+	filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=0.2);
+	*/
+}
+
+#kort {
+	height: 290px;
+	width: auto;
+	background: transparent;
+	
+	position: relative;
+	right: 0;
+	top: -40px;
+}
+
+#map_takki {
+	width: 220px;
+	height: 20px;
+	padding: 12px 10px 10px 10px;
+	background: rgb(210, 210, 210);
+	position: relative;
+	top: 20px;
+	left: 400px;
+	
+	box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.5);
+	
+	transform: rotate(15deg);
+	-ms-transform: rotate(15deg); /* IE 9 */
+	-webkit-transform: rotate(15deg); /* Safari and Chrome */
+	-o-transform: rotate(15deg); /* Opera */
+	-moz-transform: rotate(15deg); /* Firefox */
+
+	z-index: 50;
+}
+
+#map {
+	height: 450px;
+	width: 960px;
+	margin: 0 auto;
+	
+
+}
+
+/* jqModal base Styling courtesy of;
+  Brice Burgess <bhb@iceburg.net> */
+
+/* The Window's CSS z-index value is respected (takes priority). If none is supplied,
+  the Window's z-index value will be set to 3000 by default (in jqModal.js). You
+  can change this value by either;
+    a) supplying one via CSS
+    b) passing the "zIndex" parameter. E.g.  (window).jqm({zIndex: 500}); */
+  
+.jqmWindow {
+	display: none;
+	position: fixed;
+    top: 200px;
+    left: 50%;
+    
+    margin-left: -480px;
+    width: 960px;
+    
+    background-color: rgba(200, 200, 200, .9);
+    color: #333;
+    border: 1px solid black;
+    padding: 12px;
+}
+
+.jqmClose{
+	float: right;
+	margin-bottom: 10px;
+}
+
+.jqmOverlay { background-color: #000; }
+
+/* Fixed posistioning emulation for IE6
+     Star selector used to hide definition from browsers other than IE6
+     For valid CSS, use a conditional include instead */
+* html .jqmWindow {
+     position: absolute;
+     top: expression((document.documentElement.scrollTop || document.body.scrollTop) + Math.round(17 * (document.documentElement.offsetHeight || document.body.clientHeight) / 100) + 'px');
+}
+
+
+
+
+
+/* 14. COMPLEMENTARY ============================================================================= */
+
+/*Um okkur section tabs*/
+
+#um_okkur_nav {
+	position: relative;
+	display: block;
+	overflow: hidden;
+	left: 0;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+#um_okkur_nav li {
+	display: block;
+	float: left;
+	}
+
+#um_okkur_nav li a {
+	display: block;
+	line-height: 19px;
+	float: none;
+	padding: 0 10px;
+	margin-left: 20px;	
+}
+
+
+.ui-tabs {
+	position: relative; 
+	padding: 0; 
+	zoom: 1; 
+} 
+
+/* position: relative prevents IE scroll bug (element with position: relative inside container with overflow: auto appear as "fixed") */
+
+.ui-tabs .ui-tabs-nav {
+	margin: 0; 
+	padding: 0; 
+}
+.ui-tabs .ui-tabs-nav li {
+	list-style: none; 
+	float: left; 
+	position: relative; 
+	top: 1px; 
+	margin: 0; 
+	border-bottom: 0 !important; 
+	padding: 0; 
+	white-space: nowrap;
+}
+
+.ui-tabs .ui-tabs-nav li a {
+	float: left; 
+	padding: 0; 
+	text-decoration: none;
+}
+
+.ui-tabs .ui-tabs-nav li.ui-tabs-selected {
+	margin-bottom: 0;
+	padding-bottom: 0;
+}
+
+.ui-tabs .ui-tabs-nav li.ui-tabs-selected a,
+.ui-tabs .ui-tabs-nav li.ui-state-disabled a,
+.ui-tabs .ui-tabs-nav li.ui-state-processing a { 
+	cursor: text;
+}
+
+.ui-tabs .ui-tabs-nav li a,
+.ui-tabs.ui-tabs-collapsible .ui-tabs-nav li.ui-tabs-selected a {
+	cursor: pointer;
+} 
+
+/* first selector in group seems obsolete, but required to overcome bug in Opera applying cursor: text overall if defined elsewhere... */
+
+.ui-tabs .ui-tabs-panel { 
+	display: block; 
+	border-width: 0; 
+	padding: 0; 
+	background: none; 
+}
+
+.ui-tabs .ui-tabs-hide { 
+	display: none !important;
+}
+
+/* Um okkur Starfsmenn gallery slider */
+
+#slide_gallery {
+}
+
+.slide {
+	height: 500px;
+}
+
+/*  Slide gallery  */
+.sp-slideshow {
+    position: relative;
+	margin: 0 auto;
+	width: 90%;
+	max-width: 960px;
+	min-width: 158px;
+	height: auto;
+
+}
+
+.sp-content {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+.sp-image {
+	float: left;
+	width: 100%;
+}
+
+.sp-text {
+	line-height: 1.5rem;
+	float: left;
+	width: 100%;
+	padding: 0%;
+	text-align: left;
+	color: rgb(30, 30, 30);
+}
+
+.sp-text h2,
+.sp-text h3 {
+	line-height: 1.8rem;
+}
+
+.sp-text h2 {
+	font-size: 1.5rem;
+}
+
+.sp-text h3{
+	font-size: 1.2rem;
+}
+
+.sp-parallax-bg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+.sp-slideshow input {
+    position: absolute;
+	bottom: 15px;
+	left: 50%;
+	width: 9px;
+	height: 9px;
+	z-index: 1001;
+	cursor: pointer;
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+    opacity: 0;
+}
+
+.sp-slideshow input + label {
+    position: absolute;
+    bottom: -20px;
+	left: 50%;
+    width: 6px;
+	height: 6px;
+	display: block;
+	z-index: 1000;
+	border: 3px solid #fff;
+	border: 3px solid rgba(120,120,120,0.9);
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    -webkit-transition: background-color linear 0.1s;
+    -moz-transition: background-color linear 0.1s;
+    -o-transition: background-color linear 0.1s;
+    -ms-transition: background-color linear 0.1s;
+    transition: background-color linear 0.1s;
+}
+.sp-slideshow input:checked + label {
+	background-color: #fff;
+    background-color: rgba(80,80,80,0.9);
+}
+
+.sp-selector-1, .button-label-1 {
+    margin-left: -36px;
+}
+
+.sp-selector-2, .button-label-2 {
+    margin-left: -18px;
+}
+
+.sp-selector-4, .button-label-4 {
+    margin-left: 18px;
+}
+
+.sp-selector-5, .button-label-5 {
+    margin-left: 36px;
+}
+
+.sp-arrow {
+    position: absolute;
+	width: 28px;
+	height: 38px;
+	margin-top: -19px;
+	display: none;
+	opacity: 0.8;
+	cursor: pointer;
+	z-index: 1000;
+	background: transparent url(../images/arrows.png) no-repeat;
+	-webkit-transition: opacity linear 0.3s;
+    -moz-transition: opacity linear 0.3s;
+    -o-transition: opacity linear 0.3s;
+    -ms-transition: opacity linear 0.3s;
+    transition: opacity linear 0.3s;
+}
+.sp-arrow:hover{
+	opacity: 1;
+}
+.sp-arrow:active{
+	margin-top: -18px;
+}
+.sp-selector-1:checked ~ .sp-arrow.sp-a2,
+.sp-selector-2:checked ~ .sp-arrow.sp-a3,
+.sp-selector-3:checked ~ .sp-arrow.sp-a4,
+.sp-selector-4:checked ~ .sp-arrow.sp-a5 {
+    right: 20px;
+	display: block;
+	background-position: top right;
+}
+.sp-selector-2:checked ~ .sp-arrow.sp-a1,
+.sp-selector-3:checked ~ .sp-arrow.sp-a2,
+.sp-selector-4:checked ~ .sp-arrow.sp-a3,
+.sp-selector-5:checked ~ .sp-arrow.sp-a4 {
+    left: 20px;
+	display: block;
+	background-position: top left;
+}
+
+.sp-slideshow input:checked ~ .sp-content {
+    -webkit-transition: background-position linear 0.6s, background-color linear 0.8s;
+    -moz-transition: background-position linear 0.6s, background-color linear 0.8s;
+    -o-transition: background-position linear 0.6s, background-color linear 0.8s;
+    -ms-transition: background-position linear 0.6s, background-color linear 0.8s;
+    transition: background-position linear 0.6s, background-color linear 0.8s;
+}
+
+.sp-slideshow input:checked ~ .sp-content .sp-parallax-bg {
+    -webkit-transition: background-position linear 0.7s;
+    -moz-transition: background-position linear 0.7s;
+    -o-transition: background-position linear 0.7s;
+    -ms-transition: background-position linear 0.7s;
+    transition: background-position linear 0.7s;
+}
+
+input.sp-selector-1:checked ~ .sp-content {
+    background-position: 0 0;
+}
+
+input.sp-selector-2:checked ~ .sp-content {
+    background-position: -100px 0;
+}
+
+input.sp-selector-3:checked ~ .sp-content {
+    background-position: -200px 0;
+}
+
+input.sp-selector-4:checked ~ .sp-content {
+    background-position: -300px 0;
+}
+
+input.sp-selector-5:checked ~ .sp-content {
+    background-position: -400px 0;
+}
+
+input.sp-selector-1:checked ~ .sp-content .sp-parallax-bg {
+    background-position: 0 0;
+}
+
+input.sp-selector-2:checked ~ .sp-content .sp-parallax-bg {
+    background-position: -200px 0;
+}
+
+input.sp-selector-3:checked ~ .sp-content .sp-parallax-bg {
+    background-position: -400px 0;
+}
+
+input.sp-selector-4:checked ~ .sp-content .sp-parallax-bg {
+    background-position: -600px 0;
+}
+
+input.sp-selector-5:checked ~ .sp-content .sp-parallax-bg {
+    background-position: -800px 0;
+}
+
+.sp-slider {
+    position: relative;
+	left: 0;
+    width: 500%;
+	height: 100%;
+	list-style: none;
+    margin: 0;
+	padding: 0;
+    -webkit-transition: left ease-in 0.8s;
+    -moz-transition: left ease-in 0.8s;
+    -o-transition: left ease-in 0.8s;
+    -ms-transition: left ease-in 0.8s;
+    transition: left ease-in 0.8s; 
+}
+
+.sp-slider > li {
+	width: 20%;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+	height: 100%;
+	padding: 1%;
+    float: left;
+	text-align: center;
+	opacity: 0.4;
+    -webkit-transition: opacity ease-in 0.4s 0.8s;
+    -moz-transition: opacity ease-in 0.4s 0.8s;
+    -o-transition: opacity ease-in 0.4s 0.8s;
+    -ms-transition: opacity ease-in 0.4s 0.8s;
+    transition: opacity ease-in 0.4s 0.8s; 
+}
+.sp-slider > li img{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+	display: block;
+	margin: 0 auto;
+	margin-bottom: 10px;
+	padding: 0;
+	max-height: 100%;
+	max-width: 100%;
+}
+input.sp-selector-1:checked ~ .sp-content .sp-slider {
+    left: 0;
+}
+
+input.sp-selector-2:checked ~ .sp-content .sp-slider {
+    left: -100%;
+}
+
+input.sp-selector-3:checked ~ .sp-content .sp-slider {
+    left: -200%;
+}
+
+input.sp-selector-4:checked ~ .sp-content .sp-slider {
+    left: -300%;
+}
+
+input.sp-selector-5:checked ~ .sp-content .sp-slider {
+    left: -400%;
+}
+
+input.sp-selector-1:checked ~ .sp-content .sp-slider > li:first-child,
+input.sp-selector-2:checked ~ .sp-content .sp-slider > li:nth-child(2),
+input.sp-selector-3:checked ~ .sp-content .sp-slider > li:nth-child(3),
+input.sp-selector-4:checked ~ .sp-content .sp-slider > li:nth-child(4),
+input.sp-selector-5:checked ~ .sp-content .sp-slider > li:nth-child(5){
+	opacity: 1;
+}
+/*  End Slide gallery */
+
+
+.control {
+	display:block;
+	width:39px;
+	height:40px;
+	text-indent:-10000px;
+	position:absolute;
+	cursor: pointer;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+    -moz-box-shadow: -2px 2px 5px #333333;
+	-webkit-box-shadow: -2px 2px 5px #333333;
+	box-shadow: -2px 2px 5px #333333;
+}
+
+.control:hover{
+    -moz-box-shadow: -1px 1px 5px #333333;
+	-webkit-box-shadow: -1px 1px 5px #333333;
+	box-shadow: -1px 1px 5px #333333;
+}
+#leftControl {
+	top:400px;
+	left:-25px;
+	background:transparent url(assets/img/control_left.png) no-repeat 0 0;
+}
+#rightControl {
+	top:400px;
+	right:-25px;
+	background:transparent url(assets/img/control_right.png) no-repeat 0 0;
+}
+
+
+.secondary {
+	display: none !important;
+}
+
+/* 15. CONTENT INFO ============================================================================== */
+footer#main_footer{
+	min-height: 60px;
+	width: 100%;
+	background: #fafafa;
+
+	box-shadow: 0px 1px 5px 2px rgba(0, 0, 0, 0.1);
+	z-index: 2000;	
+}
+
+/* 16. GLOBAL OBJECTS ============================================================================ */
+.right {
+	float: right;
+}
+
+.left {
+	float: left;
+}
+
+.min_height {
+	min-height: 280px;
+}
+
+.col75, .col66, .col50, .col33, .col25 {
+	float: left;
+	display: block;
+}
+
+.col75 {
+	width: 75%;
+}
+
+.col66 {
+	width: 66.666%;
+}
+
+.col50 {
+	width: 50%;
+}
+
+.col33 {
+	width: 33.333%;
+}
+
+.col25 {
+	width: 25%;
+}
+
+/* 17. VENDOR-SPECIFIC =========================================================================== */
+
+html { 
+	-webkit-overflow-scrolling : touch; 
+	-webkit-text-size-adjust : 100%; 
+	-ms-text-size-adjust : 100%; 
+}
+
+::-webkit-selection { 
+	color : rgb(250,250,250); 
+	text-shadow : none; 
+}
+
+::-moz-selection { 
+	text-shadow : none; 
+}
+
+::selection { 
+	text-shadow : none; 
+}
+
+button, 
+input[type="button"], 
+input[type="reset"], 
+input[type="submit"] { 
+	-webkit-appearance : button; 
+}
+
+::-webkit-input-placeholder {
+	font-size: 0.8rem; 
+}
+
+input:-moz-placeholder { 
+	font-size: 0.8rem;
+}
+
+.ie7 img,
+.iem7 img { 
+	-ms-interpolation-mode : bicubic; 
+}
+
+input[type="checkbox"], 
+input[type="radio"] { 
+	box-sizing : border-box; 
+}
+
+input[type="search"] { 
+	-webkit-box-sizing : content-box;
+	-moz-box-sizing : content-box; 
+}
+
+button::-moz-focus-inner, 
+input::-moz-focus-inner { 
+	padding : 0;
+	border : 0; 
+}
+
+p {
+// http://www.w3.org/TR/css3-text/#hyphenation
+	-webkit-hyphens : auto;
+	-webkit-hyphenate-character : "\2010";
+	-webkit-hyphenate-limit-after : 1;
+	-webkit-hyphenate-limit-before : 3;
+	-moz-hyphens : auto; 
+}
+
+// Non-semantic helper classes 
+
+.ir { 
+	display : block; 
+	overflow : hidden; 
+	background-repeat : no-repeat; 
+	text-align : left; 
+	text-indent : -999em; 
+	direction : ltr; 
+}
+
+.ir br { 
+	display : none; 
+}
+
+.hidden { 
+	display : none; 
+	visibility: hidden; 
+}
+
+.visuallyhidden { 
+	position : absolute;
+	margin : -1px;
+	padding : 0;
+	height  : 1px;
+	width : 1px;
+	overflow : hidden;
+	border : 0; 
+	clip : rect(0 0 0 0); 
+}
+
+.visuallyhidden.focusable:active, 
+.visuallyhidden.focusable:focus { 
+	position: static;
+	margin : 0; 
+	height : auto; 
+	width : auto;
+	overflow: visible; 
+	clip : auto; 
+}
+
+.invisible { 
+	visibility : hidden; 
+}
+
+/* 18. MODERNIZR ================================================================================= */
+
+// audio
+// applicationcache
+// backgroundsize 
+// borderimage
+// borderradius
+// boxshadow
+// canvas
+// canvastext
+// cssanimations
+// csscolumns
+// cssgradients
+// cssreflections
+// csstransforms
+// csstransforms3d
+// csstransitions
+// draganddrop
+// flexbox
+// fontface
+// geolocation
+// hashchange
+// history
+// hsla
+// indexeddb
+// inlinesvg
+// localstorage
+// multiplebgs
+// opacity
+// postmessage
+// rgba
+// sessionstorage
+// smil
+// svg
+// svgclippaths
+// textshadow
+// touch
+// video
+// webgl
+// websqldatabase
+// websockets
+// webworkers
+
+/* 19. TEMPLATE SPECIFICS ======================================================================== */
+clear{
+	/*fix for above*/
+}
+
+section{
+	width: 100%;
+	min-height: 290px;
+	
+	padding: 105px 0 50px 0;
+	
+}
+
+article {
+	min-width: 320px;
+	width: 90%;
+	max-width: 960px;
+	
+	margin: 0 auto;
+	padding: 20px 0;
+}
+
+
+.uppi {
+	background: url(assets/img/bg-gratt.png) repeat;
+
+	
+	-webkit-box-shadow: 0px -1px 2px 0px rgba(0, 0, 0, 0.25), 0px 1px 2px 0px rgba(0, 0, 0, 0.25);
+	-moz-box-shadow: 0px -1px 2px 0px rgba(0, 0, 0, 0.25), 0px 1px 2px 0px rgba(0, 0, 0, 0.25);
+	box-shadow: 0px -1px 2px 0px rgba(0, 0, 0, 0.25), 0px 1px 2px 0px rgba(0, 0, 0, 0.25);
+}
+
+.nidri {
+	background: url(assets/img/bg-dokk-gratt.png) repeat;
+	
+	
+	-webkit-box-shadow: inset 0px 5px 10px -5px rgba(0, 0, 0, 0.3);
+	-moz-box-shadow: inset 0px 5px 10px -5px rgba(0, 0, 0, 0.3);
+	box-shadow: inset 0px 5px 10px -5px rgba(0, 0, 0, 0.3);
+}
+
+
+/* 20. MEDIA QUERIES ============================================================================= */
+
+
+
+
+@media print {
+
+/* 1. FONT FACE				====================================================================== */
+/* 2. ROOT					====================================================================== */
+* { 
+	background : transparent !important; 
+	color : black !important; 
+	text-shadow : none !important; 
+	filter : none !important; 
+	-ms-filter : none !important; 
+}
+
+@page { 
+	margin : 0.5cm; 
+}
+/* 3. HEADINGS				====================================================================== */
+h2, h3 { 
+	orphans : 3; 
+	widows : 3; 
+	page-break-after : avoid; 
+}
+/* 4. TYPOGRAPHY			====================================================================== */
+
+p { 
+	orphans : 3; 
+	widows : 3; 
+}
+
+pre, blockquote { 
+	border : 1px solid @grey; 
+	page-break-inside : avoid; 
+}
+
+abbr[title]:after { 
+	content : " (" attr(title) ")"; 
+}
+
+/* 5. LINKS 				====================================================================== */
+a, a:visited { 
+	color : @black !important; 
+	text-decoration : underline; 
+}
+
+a[href]:after { 
+	content : " (" attr(href) ")"; 
+}
+
+a[href^="javascript:"]:after, 
+a[href^="#"]:after { 
+	content : "";
+ } 
+
+/* 6. FIGURES & IMAGES		====================================================================== */
+img {
+	max-width: 100% !important;
+	page-break-inside: avoid;
+}
+/* 7. TABLES				====================================================================== */
+thead {
+	display: table-header-group;
+}
+
+tr {
+	
+page-break-inside: avoid;
+}
+
+/* 8. FORMS					====================================================================== */
+/* 9. BANNER				====================================================================== */
+/* 10. NAVIGATION			====================================================================== */
+/* 11. CONTENT				====================================================================== */
+/* 12. MAIN					====================================================================== */
+/* 13. COMPLEMENTARY		====================================================================== */
+/* 14. CONTENT INFO			====================================================================== */
+/* 15. GLOBAL OBJECTS		====================================================================== */
+.ir a:after {
+	content: "";
+}
+/* 16. VENDOR-SPECIFIC		====================================================================== */
+/* 17. MODERNIZR			====================================================================== */
+/* 18. TEMPLATE SPECIFICS	====================================================================== */
+
+}
+/* 480px */
+@media only screen and (min-width: 480px) {
+
+/* 1. FONT FACE				====================================================================== */
+/* 2. ROOT					====================================================================== */
+/* 3. HEADINGS				====================================================================== */
+/* 4. TYPOGRAPHY			====================================================================== */
+/* 5. LINKS 				====================================================================== */
+/* 6. FIGURES & IMAGES		====================================================================== */
+/* 7. TABLES				====================================================================== */
+/* 8. FORMS					====================================================================== */
+/* 9. BANNER				====================================================================== */
+/* 10. NAVIGATION			====================================================================== */
+/* 11. CONTENT				====================================================================== */
+/* 12. MAIN					====================================================================== */
+/* 13. COMPLEMENTARY		====================================================================== */
+/* 14. CONTENT INFO			====================================================================== */
+/* 15. GLOBAL OBJECTS		====================================================================== */
+/* 16. VENDOR-SPECIFIC		====================================================================== */
+/* 17. MODERNIZR			====================================================================== */
+/* 18. TEMPLATE SPECIFICS	====================================================================== */
+
+}
+/* 600px */
+@media only screen and (min-width: 600px) {
+
+/* 1. FONT FACE				====================================================================== */
+/* 2. ROOT					====================================================================== */
+/* 3. HEADINGS				====================================================================== */
+/* 4. TYPOGRAPHY			====================================================================== */
+/* 5. LINKS 				====================================================================== */
+/* 6. FIGURES & IMAGES		====================================================================== */
+/* 7. TABLES				====================================================================== */
+/* 8. FORMS					====================================================================== */
+/* 9. BANNER				====================================================================== */
+/* 10. NAVIGATION			====================================================================== */
+/* 11. CONTENT				====================================================================== */
+/* 12. MAIN					====================================================================== */
+/* 13. COMPLEMENTARY		====================================================================== */
+/* 14. CONTENT INFO			====================================================================== */
+/* 15. GLOBAL OBJECTS		====================================================================== */
+/* 16. VENDOR-SPECIFIC		====================================================================== */
+/* 17. MODERNIZR			====================================================================== */
+/* 18. TEMPLATE SPECIFICS	====================================================================== */
+
+}
+/* 768px */
+@media only screen and (min-width: 768px) {
+
+/* 1. FONT FACE				====================================================================== */
+.sp-slideshow {
+	width: 960px;
+	margin: 0;
+}
+.sp-slider li {
+	padding: 0;
+}
+.sp-slider > li img{
+	margin: 0 0 10px 100px;
+	}
+
+	.sp-image {
+		float: right;
+		width: 50%;
+	}
+	
+	.sp-text {
+		width: 100%;
+		float: none;
+	}
+	
+	.sp-text hgroup {
+		width: 100%;
+	}
+	
+	.sp-text p {
+		width: auto;
+		float: none;
+	}
+}
+
+/* 2. ROOT					====================================================================== */
+/* 3. HEADINGS				====================================================================== */
+/* 4. TYPOGRAPHY			====================================================================== */
+/* 5. LINKS 				====================================================================== */
+/* 6. FIGURES & IMAGES		====================================================================== */
+/* 7. TABLES				====================================================================== */
+/* 8. FORMS					====================================================================== */
+/* 9. BANNER				====================================================================== */
+/* 10. NAVIGATION			====================================================================== */
+/* 11. CONTENT				====================================================================== */
+/* 12. MAIN					====================================================================== */
+/* 13. COMPLEMENTARY		====================================================================== */
+/* 14. CONTENT INFO			====================================================================== */
+/* 15. GLOBAL OBJECTS		====================================================================== */
+/* 16. VENDOR-SPECIFIC		====================================================================== */
+/* 17. MODERNIZR			====================================================================== */
+/* 18. TEMPLATE SPECIFICS	====================================================================== */
+
+}
+/* 992px */
+@media only screen and (min-width: 992px) {
+
+/* 1. FONT FACE				====================================================================== */
+/* 2. ROOT					====================================================================== */
+/* 3. HEADINGS				====================================================================== */
+/* 4. TYPOGRAPHY			====================================================================== */
+/* 5. LINKS 				====================================================================== */
+/* 6. FIGURES & IMAGES		====================================================================== */
+/* 7. TABLES				====================================================================== */
+/* 8. FORMS					====================================================================== */
+/* 9. BANNER				====================================================================== */
+/* 10. NAVIGATION			====================================================================== */
+/* 11. CONTENT				====================================================================== */
+/* 12. MAIN					====================================================================== */
+/* 13. COMPLEMENTARY		====================================================================== */
+/* 14. CONTENT INFO			====================================================================== */
+/* 15. GLOBAL OBJECTS		====================================================================== */
+/* 16. VENDOR-SPECIFIC		====================================================================== */
+/* 17. MODERNIZR			====================================================================== */
+/* 18. TEMPLATE SPECIFICS	====================================================================== */
+
+}
+/* 1382px */
+@media only screen and (min-width: 1382px) {
+
+/* 1. FONT FACE				====================================================================== */
+/* 2. ROOT					====================================================================== */
+/* 3. HEADINGS				====================================================================== */
+/* 4. TYPOGRAPHY			====================================================================== */
+/* 5. LINKS 				====================================================================== */
+/* 6. FIGURES & IMAGES		====================================================================== */
+/* 7. TABLES				====================================================================== */
+/* 8. FORMS					====================================================================== */
+/* 9. BANNER				====================================================================== */
+/* 10. NAVIGATION			====================================================================== */
+/* 11. CONTENT				====================================================================== */
+/* 12. MAIN					====================================================================== */
+/* 13. COMPLEMENTARY		====================================================================== */
+/* 14. CONTENT INFO			====================================================================== */
+/* 15. GLOBAL OBJECTS		====================================================================== */
+/* 16. VENDOR-SPECIFIC		====================================================================== */
+/* 17. MODERNIZR			====================================================================== */
+/* 18. TEMPLATE SPECIFICS	====================================================================== */
+
+}
+/* 2x */
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), 
+only screen and (-o-min-device-pixel-ratio: 3/2), 
+only screen and (min-device-pixel-ratio: 1.5) {
+
+/* 1. FONT FACE				====================================================================== */
+/* 2. ROOT					====================================================================== */
+/* 3. HEADINGS				====================================================================== */
+/* 4. TYPOGRAPHY			====================================================================== */
+/* 5. LINKS 				====================================================================== */
+/* 6. FIGURES & IMAGES		====================================================================== */
+/* 7. TABLES				====================================================================== */
+/* 8. FORMS					====================================================================== */
+/* 9. BANNER				====================================================================== */
+/* 10. NAVIGATION			====================================================================== */
+/* 11. CONTENT				====================================================================== */
+/* 12. MAIN					====================================================================== */
+/* 13. COMPLEMENTARY		====================================================================== */
+/* 14. CONTENT INFO			====================================================================== */
+/* 15. GLOBAL OBJECTS		====================================================================== */
+/* 16. VENDOR-SPECIFIC		====================================================================== */
+/* 17. MODERNIZR			====================================================================== */
+/* 18. TEMPLATE SPECIFICS	====================================================================== */
+}
