@@ -1,0 +1,7 @@
+
+# Use ErrorDocument to redirect traffic
+ErrorDocument 404 /404.html
+
+# Restrict access to .git
+RedirectMatch 404 /\.git
+

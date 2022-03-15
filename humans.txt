@@ -1,21 +1,21 @@
 /* humanstxt.org */
 
-
-Name: Bílabær sf.
+Name: Bílabær sf. 
 Site: http://bilabaer.is
 Location: IS
 
 
-/* TEAM */
-	Owner: Kristjan B. Halfdanarson
-	Contact: me [at] kristjanbh.com
-	Twitter: @kristjanbh
-	From: Borgarnes, Iceland
-  Location: San Francisco, US
+Default theme design:
+
+Name: Kristjan B. Halfdanarson
+Site:	http://kristjanbh.com
+Twitter: @kristjanbh
+Location: US
 
 
 /* SITE */
-	Last update: 01 April 2018
-	Language: English
-	Doctype:HTML5
-	IDE: Atom, Sketch
+
+Standards: 
+
+HTML5
+CSS3

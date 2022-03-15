@@ -6,22 +6,15 @@ Allt
  Búa til myndir
  Búa til grafík
  Ákveða liti
- Ákveða Týpógrafíu
- 	Verdana
- Færa hýsingu
- Á að byggja þetta á CMS kerfi?? - afhverju - afhverju ekki
+Á að byggja þetta á CMS kerfi?? - afhverju - afhverju ekki
  
  Setja inn contact upplýsingar 
- Setja inn Facebúk upplýsingar
  Setja inn Þjónustu sem boðið er uppá
  Setja inn samstarfsfélaga
 
  Setja inn vörumerki
  Setja inn Bíatorg upplýsingar
- 
- 
- 
- 
+   
  
  * Fara yfir Humans.txt
  * Fara yfir ignore.txt
